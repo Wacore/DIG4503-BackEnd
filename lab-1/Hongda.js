@@ -6,8 +6,4 @@ class Hongda extends Person {
   }
 }
 
-let hongda = new Hongda("Hongda", "orange");
-
-// hongda.speak();
-
 module.exports = Hongda;
