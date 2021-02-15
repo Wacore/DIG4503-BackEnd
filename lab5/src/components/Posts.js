@@ -3,7 +3,7 @@ import axios from "axios";
 
 const Posts = () => {
   // using useState to define a state called Posts
-  const [Posts, setPosts] = useState();
+  const [posts, setPosts] = useState();
 
   // using useEffect to fetch data from the API.
   useEffect(() => {
@@ -18,8 +18,8 @@ const Posts = () => {
   return (
     <div>
       <h1>Posts</h1>
-      {Posts &&
-        Posts.map((p) => {
+      {posts &&
+        posts.map((p) => {
           const { id, title, body } = p;
           return (
             <div key={id}>
