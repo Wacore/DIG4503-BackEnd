@@ -1,3 +1,5 @@
+// export all pokemon data
+
 module.exports = [
   {
     name: "IndeeDee",

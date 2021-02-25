@@ -3,6 +3,8 @@ import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVenus } from "@fortawesome/free-solid-svg-icons";
 
+// create a react component called PokeItem, which displays a pokemon's data like name, image, HP, Level, and gender
+
 export default class PokeItem extends Component {
   render() {
     return (
