@@ -40,7 +40,7 @@ app.get("/pokemon/:name", (req, res) => {
       : `Found: ${name[0]}. Params: ${req.params.name}`;
 
   // send the result to the user
-  res.json(result);
+  res.send(result);
 });
 
 app.get("/search/:name", (req, res) => {
@@ -53,6 +53,6 @@ app.get("/search/:name", (req, res) => {
       : `Found: ${pokemonsFound}. Params: ${req.params.name}`;
 
   // send the result to the user
-  res.json(result);
+  res.send(result);
 });
 app.listen(port, () => console.log(`Listening on port ${port} ...`));
