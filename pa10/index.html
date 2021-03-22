@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIG4503-Participation Activity #10</title>
+  </head>
+  <body>
+    <h2>Participation Log</h2>
+
+    <form onsubmit="() => console.log('submit')">
+      <div class="input-field" style="margin: 1em 0">
+        <label for="name" style="display: block">Name</label>
+        <input type="text" id="name" name="name" />
+      </div>
+
+      <div class="input-field" style="margin: 1em 0">
+        <label for="major" style="display: block">Major</label>
+        <input type="text" id="major" name="major" />
+      </div>
+
+      <div class="input-field" style="margin: 1em 0">
+        <label for="courses" style="display: block"
+          >Previous courses takin in DIG</label
+        >
+        <textarea name="courses" id="courses" cols="30" rows="10"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
