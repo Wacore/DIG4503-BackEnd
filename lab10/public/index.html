@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIG4503</title>
+  </head>
+  <body>
+    <h2>Age</h2>
+    <form onsubmit="handleSubmitAgeForm(event)">
+      <input type="text" name="age" id="age" placeholder="age" />
+      <button>Submit</button>
+    </form>
+    <h2>Name</h2>
+    <form onsubmit="handleSubmitNameForm(event)">
+      <input type="text" name="name" id="name" placeholder="name" />
+      <button>Submit</button>
+    </form>
+    <h2>Add a new employee</h2>
+    <form onsubmit="handleSubmitPostForm(event)">
+      <input type="text" name="name" id="namePost" placeholder="name" />
+      <input type="text" name="age" id="agePost" placeholder="age" />
+      <button>Submit</button>
+    </form>
+    <h2>Reporting Area</h2>
+    <div
+      id="reportingArea"
+      style="
+        width: 450px;
+        height: 100px;
+        border: 1px solid #cccccc;
+        margin-top: 1em;
+      "
+    ></div>
+
+    <script>
+      // Function to handle the get request
+      const handleSubmitAgeForm = (event) => {
+        // Prevent the window from refreshing
+        event.preventDefault();
+        // get the value from the input field
+        let age = document.getElementById("age").value;
+        // send a get request to the route
+        fetch(`/ages/${age}`)
+          .then((res) => {
+            return res.json();
+          })
+          .then((processed) => {
+            // Select the reporting area
+            let reportingArea = document.getElementById("reportingArea");
+            if (processed.error) {
+              // if error exists, render the error
+              reportingArea.innerHTML = processed.error;
+            } else {
+              // otherwise, render the result
+              reportingArea.innerHTML = processed.name;
+            }
+          });
+      };
+
+      // Function to handle the get request
+      const handleSubmitNameForm = (event) => {
+        // Prevent the window from refreshing
+        event.preventDefault();
+        // get the value from the input field
+        let name = document.getElementById("name").value;
+        // send a get request to the route
+        fetch(`/employees/${name}`)
+          .then((res) => {
+            return res.json();
+          })
+          .then((processed) => {
+            // Select the reporting area
+            let reportingArea = document.getElementById("reportingArea");
+
+            if (processed.error) {
+              // if error exists, render the error
+              reportingArea.innerHTML = processed.error;
+            } else {
+              // otherwise, render the result
+              reportingArea.innerHTML = processed.name;
+            }
+          });
+      };
+      // Function to handle the post request
+      const handleSubmitPostForm = (event) => {
+        // Prevent the window from refreshing
+        event.preventDefault();
+        // get the value from the input fields
+        let age = document.getElementById("agePost").value;
+        let name = document.getElementById("namePost").value;
+
+        // send the post request to the route with two params
+        fetch(`/employee/${name}/${age}`, { method: "post" })
+          .then((res) => {
+            return res.json();
+          })
+          .then(
+            // if it is fulfilled, print the reust to the console.
+            (processed) => console.log(processed)
+          );
+      };
+    </script>
+  </body>
+</html>
