@@ -8,7 +8,7 @@ export default class AgeSearch extends Component {
     // get the value from the input field
     let age = document.getElementById("age").value;
     // send a get request to the route
-    fetch(`/ages/${age}`)
+    fetch(`http://localhost:3010/ages/${age}`)
       .then((res) => {
         return res.json();
       })

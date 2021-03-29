@@ -14,7 +14,7 @@ let fileContents = fs.readFileSync("database.json");
 let database = JSON.parse(fileContents);
 
 // public route
-app.use("/", express.static("client/build"));
+app.use("/", express.static("public"));
 
 // Handle get request on /employees/:name
 app.get("/employees/:name", (req, res) => {

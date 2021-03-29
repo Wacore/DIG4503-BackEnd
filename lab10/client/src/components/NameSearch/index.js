@@ -6,7 +6,7 @@ export default class NameSearch extends Component {
     // get the value from the input field
     let name = document.getElementById("name").value;
     // send a get request to the route
-    fetch(`/employees/${name}`)
+    fetch(`http://localhost:3010/employees/${name}`)
       .then((res) => {
         return res.json();
       })
@@ -19,7 +19,7 @@ export default class NameSearch extends Component {
           reportingArea.innerHTML = processed.error;
         } else {
           // otherwise, render the result
-          reportingArea.innerHTML = processed.name;
+          reportingArea.innerHTML = processed.age;
         }
       });
   }
