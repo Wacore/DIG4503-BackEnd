@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./index.css";
 
 export default class ReportingArea extends Component {
   render() {

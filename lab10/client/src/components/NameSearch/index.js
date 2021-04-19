@@ -1,3 +1,4 @@
+import "./index.css";
 import React, { Component } from "react";
 
 export default class NameSearch extends Component {

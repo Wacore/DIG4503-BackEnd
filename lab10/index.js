@@ -14,7 +14,8 @@ let fileContents = fs.readFileSync("database.json");
 let database = JSON.parse(fileContents);
 
 // public route
-app.use("/", express.static("public"));
+// Lab 12: Change the server code to serve static files from "client/build" instead of "public".
+app.use("/", express.static("client/build"));
 
 // Handle get request on /employees/:name
 app.get("/employees/:name", (req, res) => {
