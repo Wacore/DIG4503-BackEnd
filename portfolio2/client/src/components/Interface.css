@@ -1,0 +1,16 @@
+.interface {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.employeeDetails {
+  position: absolute;
+  width: 70%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

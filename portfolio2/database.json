@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Angela",
+    "age": 45,
+    "position": "Content Writer",
+    "intro": "My name is Angela, and I’m a career writer. My job is to provide job seekers with expert advice on career-related topics. I read a lot and consult recruiting professionals so you don’t have to. I show you how to hack the recruitment process, create a job-winning resume, ace the job interview, and... introduce yourself, among others."
+  },
+  {
+    "name": "Michael",
+    "age": 50,
+    "position": "Front-end Developer",
+    "intro": "I’m Michael , Im from a small village call Native, Since 3 years I’m working as web developer in Company name and location. have developed many website and apart from the I have been part of web design project, office work and as freelancer. ."
+  },
+  {
+    "name": "Jim",
+    "age": 36,
+    "position": "UX Designer",
+    "intro": "Hi, I'm a designer at Facebook/Google/Apple or similar. I'm responsible for {major well known product, like google maps}. I would like to work for you. "
+  },
+  {
+    "name": "Kelly",
+    "age": 25,
+    "position": "Back-end Developer",
+    "intro": "My name is Kelly. I work at MongoDB, so I will do my best to provide a fair answer with a specific scenario and use case."
+  },
+  {
+    "name": "Ryan",
+    "age": 28,
+    "position": "Front-end Designer",
+    "intro": "Hi I’m Yangshun and I graduated from National University of Singapore in 2015 with a degree in Computer Science. My interests are in Front End Engineering and I love to create beautiful performant products with delightful user experiences."
+  },
+  {
+    "name": "Wacore",
+    "age": 29,
+    "position": "Full-stack Developer",
+    "intro": "My name is wacore, and I’m a full-stack developer. I have been mostly working with backend (.net, sql server) and but found a new love in frontend world and has been making a transition to a frontend role."
+  }
+]
